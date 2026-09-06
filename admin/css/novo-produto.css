@@ -1,0 +1,450 @@
+/* ===================================
+   NOVO PRODUTO
+=================================== */
+
+body {
+    padding: 30px;
+}
+
+
+.topo-pagina{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.topo-pagina h1{
+    font-size:32px;
+    font-weight:700;
+    color:#fff;
+}
+
+.btn-voltar{
+    text-decoration:none;
+    color:#fff;
+    background:#2b2b2b;
+    padding:12px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.btn-voltar:hover{
+    background:#3b3b3b;
+}
+
+.btn-salvar{
+    background:#d72638;
+    color:#fff;
+    border:none;
+    padding:14px 24px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-salvar:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+/* ===============================
+   CARDS
+================================ */
+
+.card{
+
+    background:#1d1d1d;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+.card h2{
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+    color:#fff;
+
+}
+
+/* ===============================
+   CAMPOS
+================================ */
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:18px;
+
+}
+
+.campo label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#ddd;
+
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #3a3a3a;
+
+    border-radius:10px;
+
+    background:#292929;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.campo textarea{
+
+    resize:vertical;
+
+}
+
+/* ===============================
+   LINHAS
+================================ */
+
+.linha{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+/* ===============================
+   SWITCHES
+================================ */
+
+.switches{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.switch-label{
+
+    display:flex;
+
+    gap: 10px;
+
+    align-items:center;
+
+    width:100%;
+
+    margin:8px 0;
+
+}
+
+.switch-label span{
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    line-height:1;
+
+    margin:0;
+
+    font-weight: 400;
+
+    padding:0;
+
+}
+
+.switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:48px;
+
+    height:20px;
+
+}
+
+.switch input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#6b7280;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:15px;
+
+    height:15px;
+
+    left:3px;
+
+    top:3px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+
+}
+
+.switch input:checked + .slider{
+
+    background:#2563eb;
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(26px);
+
+}
+
+
+
+/* ===============================
+   UPLOAD
+================================ */
+
+.upload-imagens{
+
+    border:2px dashed #555;
+
+    border-radius:15px;
+
+    padding:40px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.upload-imagens:hover{
+
+    border-color:#d72638;
+
+}
+
+.upload-imagens input{
+
+    margin-bottom:15px;
+
+}
+
+.preview-imagens{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.preview-imagens img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    border:2px solid #333;
+
+}
+
+/* ===============================
+   RESPONSIVO
+================================ */
+
+@media(max-width:768px){
+
+    .topo-pagina{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .btn-voltar,
+    .btn-salvar{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+/* ===============================
+   TAMANHOS E CORES
+================================ */
+
+.checks{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.checks label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#292929;
+
+    padding:10px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+/* ======================================
+   ATRIBUTOS DO PRODUTO
+====================================== */
+
+.grupo-atributo-produto {
+    margin-bottom: 25px;
+}
+
+.atributo-titulo {
+    margin-bottom: 12px;
+}
+
+.atributo-titulo strong {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.atributo-opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.opcao-atributo {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    
+    width: auto !important;
+    margin: 0 !important;
+    padding: 9px 14px;
+    
+    background: #292929;
+    border: 1px solid #444;
+    border-radius: 8px;
+    
+    color: #fff !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    
+    cursor: pointer;
+}
+
+.opcao-atributo:hover {
+    border-color: #d72638;
+}
+
+.opcao-atributo input[type="checkbox"] {
+    width: 17px !important;
+    height: 17px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    accent-color: #d72638;
+    
+    cursor: pointer;
+}
+
+.opcao-atributo span {
+    color: #fff !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+
+.atributo-sem-valores {
+    color: #00d97e;
+    font-size: 14px;
+    margin: 5px 0;
+}

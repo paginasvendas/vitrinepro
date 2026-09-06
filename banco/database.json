@@ -1,0 +1,13 @@
+{
+    "produtos": [],
+    "categorias": [],
+    "bandas": [],
+    "banners": [],
+    "configuracoes": {
+        "nomeLoja": "VitrinePro",
+        "whatsapp": "",
+        "instagram": "",
+        "facebook": "",
+        "tema": "dark"
+    }
+}

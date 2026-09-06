@@ -1,0 +1,128 @@
+/*=========================================
+  VITRINEPRO
+  VARIÁVEIS GLOBAIS
+=========================================*/
+
+:root{
+
+    /* ========= CORES ========= */
+
+    --color-primary:#ff2b2b;
+    --color-primary-hover:#d81d1d;
+
+    --color-background:#111111;
+
+    --color-sidebar:#181818;
+
+    --color-header:#1b1b1b;
+
+    --color-card:#232323;
+
+    --color-hover:#2f2f2f;
+
+    --color-border:#333333;
+
+    --color-success:#2ecc71;
+
+    --color-warning:#f39c12;
+
+    --color-danger:#e74c3c;
+
+    --color-info:#3498db;
+
+    /* ========= TEXTOS ========= */
+
+    --text-primary:#ffffff;
+
+    --text-secondary:#bfbfbf;
+
+    --text-muted:#8d8d8d;
+
+    /* ========= FONTES ========= */
+
+    --font-family:'Poppins',sans-serif;
+
+    --font-size-xs:12px;
+
+    --font-size-sm:14px;
+
+    --font-size-md:16px;
+
+    --font-size-lg:18px;
+
+    --font-size-xl:24px;
+
+    --font-size-title:32px;
+
+    /* ========= PESO ========= */
+
+    --font-light:300;
+
+    --font-regular:400;
+
+    --font-medium:500;
+
+    --font-semibold:600;
+
+    --font-bold:700;
+
+    /* ========= ESPAÇAMENTOS ========= */
+
+    --space-5:5px;
+
+    --space-10:10px;
+
+    --space-15:15px;
+
+    --space-20:20px;
+
+    --space-25:25px;
+
+    --space-30:30px;
+
+    --space-40:40px;
+
+    /* ========= BORDAS ========= */
+
+    --radius-sm:8px;
+
+    --radius-md:12px;
+
+    --radius-lg:18px;
+
+    --radius-xl:24px;
+
+    --radius-round:50%;
+
+    /* ========= SOMBRAS ========= */
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.20);
+
+    --shadow-md:0 6px 18px rgba(0,0,0,.25);
+
+    --shadow-lg:0 10px 35px rgba(0,0,0,.35);
+
+    /* ========= TRANSIÇÕES ========= */
+
+    --transition-fast:.2s;
+
+    --transition:.3s;
+
+    --transition-slow:.5s;
+
+    /* ========= SIDEBAR ========= */
+
+    --sidebar-width:280px;
+
+    --sidebar-mini:85px;
+
+    --header-height:80px;
+
+    /* SIDEBAR */
+
+--sidebar-open:280px;
+
+--sidebar-close:90px;
+
+}
+

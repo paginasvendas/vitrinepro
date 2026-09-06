@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Categorias</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/mobile.css">
+<link rel="stylesheet" href="../css/categorias.css">
+<link rel="stylesheet" href="../css/modal.css">
+
+</head>
+
+<body>
+
+<div class="produtos-page">
+
+    <div class="page-header">
+
+        <h1>Categorias</h1>
+
+        <button
+            class="btn-novo"
+            id="btnNovaCategoria">
+
+            + Nova Categoria
+
+        </button>
+
+    </div>
+
+    <div class="filtros">
+
+        <input
+            type="text"
+            placeholder="Pesquisar categoria..."
+            id="pesquisaCategoria">
+
+    </div>
+
+    <div class="tabela-produtos">
+
+        <table>
+
+<thead>
+
+    <tr>
+
+        <th>Categoria</th>
+        <th>Subcategorias</th>
+        <th>Tipos de produtos</th>
+        <th>Slug</th>
+        <th>Status</th>
+        <th>Origem</th>
+        <th>Ações</th>
+
+    </tr>
+
+</thead>
+            <tbody id="listaCategorias">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+MODAL CATEGORIA
+========================== -->
+
+<div id="modalCategoria" class="modal-categoria">
+
+    <div class="modal-box">
+
+        <h2>Nova Categoria</h2>
+
+        <input
+            type="text"
+            id="nomeCategoria"
+            placeholder="Nome da categoria">
+
+            <input
+    type="text"
+    id="nomeSubcategoria"
+    placeholder="Nome da Subcategoria"
+>
+
+<input
+    type="text"
+    id="tiposdeProdutos"
+    placeholder="Nome dos Tipos de Produtos"
+>
+
+        <div class="campo-slug">
+
+    <input
+        type="text"
+        id="slugCategoria"
+        placeholder="Slug"
+        readonly>
+
+    <i class="fa-solid fa-lock"></i>
+
+</div>
+
+<small class="info-slug">
+
+    O slug é gerado automaticamente e não pode ser alterado.
+
+</small>
+
+       <label class="switch-label">
+
+    <span>Categoria Ativa</span>
+
+    <label class="switch">
+
+        <input
+            type="checkbox"
+            id="categoriaAtiva"
+            checked>
+
+        <span class="slider"></span>
+
+    </label>
+
+</label>
+
+<div class="acoes-modal">
+
+    <button
+        type="button"
+        id="btnCancelarCategoria"
+        class="btn-cancelar">
+
+        Cancelar
+
+    </button>
+
+    <button
+        type="button"
+        id="btnSalvarCategoria"
+        class="btn-salvar">
+
+        Salvar Categoria
+
+    </button>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="../js/core/database.js"></script>
+
+<script src="../js/components/modal.js"></script>
+
+<script src="../js/categorias/localstorage.js"></script>
+
+<script src="../js/temas/localstorage.js"></script>
+
+<script src="../js/temas/tema-service.js"></script>
+
+<script src="../js/categorias/categorias.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Novo Produto - VitrinePro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/novo-produto.css">
+    <link rel="stylesheet" href="../css/modal.css">
+
+</head>
+
+<body>
+
+<div class="novo-produto">
+
+    <div class="topo-pagina">
+
+        <a href="produtos.html" class="btn-voltar">
+
+            ← Voltar
+
+        </a>
+
+        <h1>Novo Produto</h1>
+
+        <button id="btnSalvarProduto" class="btn-salvar">
+
+            Salvar Produto
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Informações Gerais</h2>
+
+        <div class="campo">
+
+            <label>Nome do Produto</label>
+
+            <input
+                type="text"
+                id="nomeProduto">
+
+        </div>
+
+<div class="linha">
+
+<div class="campo">
+
+    <label>Categoria</label>
+
+    <select id="categoriaProduto">
+
+        <option value="">Selecione uma categoria</option>
+
+    </select>
+
+</div>
+
+    <div class="campo">
+
+    <label>Subcategoria</label>
+
+    <select id="subcategoriaProduto">
+
+        <option value="">
+            Selecione uma categoria primeiro
+        </option>
+
+    </select>
+
+</div>
+
+</div>
+
+
+<div class="linha">
+
+    <div class="campo">
+
+    <label>Tipo de Produto</label>
+
+    <select id="tipoProduto">
+
+        <option value="">
+            Selecione uma subcategoria primeiro
+        </option>
+
+    </select>
+
+</div>
+
+
+</div>
+
+
+<div
+    class="campo"
+    id="areaAtributosProduto">
+
+    <label>Atributos do Produto</label>
+
+    <div id="atributosProduto">
+
+        <p class="atributos-vazio">
+            Selecione um tipo de produto para visualizar os atributos.
+        </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+        <div class="linha">
+
+            <div class="campo">
+
+                <label>Preço</label>
+
+                <input
+                    type="number"
+                    id="precoProduto">
+
+            </div>
+
+            <div class="campo">
+
+                <label>Preço Promocional</label>
+
+                <input
+                    type="number"
+                    id="promocaoProduto">
+
+            </div>
+
+            <div class="campo">
+
+                <label>Estoque</label>
+
+                <input
+                    type="number"
+                    id="estoqueProduto">
+
+            </div>
+
+        </div>
+
+        <div class="campo">
+
+            <label>Descrição</label>
+
+            <textarea
+                id="descricaoProduto"
+                rows="6"></textarea>
+
+        </div>
+
+        <div class="campo">
+
+    <label>Atributos do Produto</label>
+
+    <div id="atributosProduto">
+
+        <p class="atributos-vazio">
+            Selecione um tipo de produto para visualizar os atributos.
+        </p>
+
+    </div>
+
+</div>
+
+    </div>
+
+        <div class="card">
+
+        <h2>Imagens do Produto</h2>
+
+        <div class="upload-imagens">
+
+            <input
+                type="file"
+                id="imagensProduto"
+                multiple
+                accept="image/*">
+
+            <p>
+
+                Arraste imagens aqui ou clique para selecionar
+
+            </p>
+
+        </div>
+
+        <div id="previewImagens" class="preview-imagens">
+
+        </div>
+
+    </div>
+
+
+        <div class="card">
+
+        <h2>SEO</h2>
+
+        <div class="campo">
+
+            <label>Slug</label>
+
+            <input
+                type="text"
+                id="slugProduto"
+                placeholder="camiseta-metallica-master-of-puppets">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Título SEO</label>
+
+            <input
+                type="text"
+                id="tituloSeo">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Descrição SEO</label>
+
+            <textarea
+                id="descricaoSeo"
+                rows="4"></textarea>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Configurações</h2>
+
+    
+
+<div class="switches">
+
+    <div class="switch-label">
+
+        <span>Produto em Destaque</span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="produtoDestaque">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="switch-label">
+
+        <span>Produto Ativo</span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="produtoAtivo"
+                checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="../js/core/database.js"></script>
+
+<script src="../js/components/modal.js"></script>
+
+<script src="../js/produtos/localstorage.js"></script>
+
+<script src="../js/temas/localstorage.js"></script>
+
+<script src="../js/temas/tema-service.js"></script>
+
+<script src="../js/produtos/formulario.js"></script>
+
+<script src="../js/produtos/upload.js"></script>
+
+<script src="../js/produtos/validacoes.js"></script>
+
+
+</body>
+
+</html>

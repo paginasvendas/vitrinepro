@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VitrinePro - Dashboard</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/card.css">
+<link rel="stylesheet" href="../css/mobile.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-shirt"></i>
+
+            <span>VitrinePro</span>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+<li id="menuDashboard" class="active">
+    <i class="fa-solid fa-house"></i>
+    <span>Dashboard</span>
+</li>
+
+<li id="menuProdutos">
+    <i class="fa-solid fa-box"></i>
+    <span>Produtos</span>
+</li>
+
+<li id="menuNovoProduto">
+    <i class="fa-solid fa-plus"></i>
+    <span>Novo Produto</span>
+</li>
+
+<li id="menuCategorias">
+    <i class="fa-solid fa-folder-open"></i>
+    <span>Categorias</span>
+</li>
+
+<li id="menuTemas">
+    <i class="fa-solid fa-store"></i>
+    <span>Temas</span>
+</li>
+
+<li id="menuBanners">
+    <i class="fa-solid fa-image"></i>
+    <span>Banners</span>
+</li>
+
+<li id="menuPedidos">
+    <i class="fa-solid fa-cart-arrow-down"></i>
+    <span>Pedidos</span>
+</li>
+
+<li id="menuClientes">
+    <i class="fa-solid fa-users"></i>
+    <span>Clientes</span>
+</li>
+
+<li id="menuEstatisticas">
+    <i class="fa-solid fa-chart-line"></i>
+    <span>Estatísticas</span>
+</li>
+
+<li id="menuConfiguracoes">
+    <i class="fa-solid fa-gear"></i>
+    <span>Configurações</span>
+</li>
+
+            </ul>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+    <button>
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Sair
+
+    </button>
+
+</div>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="content">
+
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <button class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <div class="search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                       type="text"
+                       placeholder="Pesquisar produtos...">
+
+            </div>
+
+            <div class="header-right">
+
+                <button>
+
+                    <i class="fa-solid fa-bell"></i>
+
+                </button>
+
+                <button>
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <div class="user">
+
+                    <img src="../img/avatar.png"
+                         alt="Usuário">
+
+                    <div>
+
+                        <strong>Paulo</strong>
+
+                        <small>Administrador</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <iframe
+    id="paginaConteudo"
+    src=""
+    style="
+        display:none;
+        width:100%;
+        height:calc(100vh - 80px);
+        margin-top:0;
+        border:none;
+    "
+></iframe>
+
+        <!-- TÍTULO -->
+
+        <section class="page-title">
+
+            <h1>Dashboard</h1>
+
+            <p>Bem-vindo à plataforma.</p>
+
+        </section>
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+    <div class="card-top">
+
+        <h3>Produtos</h3>
+
+        <i class="fa-solid fa-box"></i>
+
+    </div>
+
+    <span>152</span>
+
+    <p>+12 este mês</p>
+
+</div>
+
+<div class="card">
+
+    <div class="card-top">
+
+        <h3>Categorias</h3>
+
+        <i class="fa-solid fa-folder-open"></i>
+
+    </div>
+
+    <span>152</span>
+
+    <p>+12 este mês</p>
+
+</div>
+
+<div class="card">
+
+    <div class="card-top">
+
+        <h3>Pedidos</h3>
+
+        <i class="fa-solid fa-cart-arrow-down"></i>
+
+    </div>
+
+    <span>152</span>
+
+    <p>+12 este mês</p>
+
+</div>
+
+<div class="card">
+
+    <div class="card-top">
+
+        <h3>Whatsapp</h3>
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </div>
+
+    <span>152</span>
+
+    <p>+12 este mês</p>
+
+</div>
+
+        </section>
+
+        <!-- GRÁFICOS -->
+
+        <section class="dashboard-grid">
+
+            <div class="chart">
+
+                Gráfico de vendas
+
+            </div>
+
+            <div class="chart">
+
+                Produtos mais vendidos
+
+            </div>
+
+        </section>
+
+        <!-- TABELA -->
+
+        <section class="last-products">
+
+            <h2>Últimos Produtos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Produto</th>
+
+                        <th>Categoria</th>
+
+                        <th>Preço</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+<tbody id="ultimosProdutos">
+</tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/components/menu.js"></script>
+<script src="../js/core/app.js"></script>
+
+<script>
+
+const paginaTemas =
+    document.getElementById("paginaConteudo");
+
+const header =
+    document.querySelector(".content > header");
+
+const secoesDashboard =
+    document.querySelectorAll(".content > section");
+
+const itensMenu =
+    document.querySelectorAll(".sidebar nav li");
+
+
+// ======================================
+// ABRIR PÁGINA
+// ======================================
+
+function abrirPagina(url) {
+
+    // Esconde as seções do dashboard
+    secoesDashboard.forEach(secao => {
+
+        secao.style.display = "none";
+
+    });
+
+    carregarUltimosProdutos();
+
+
+    // Mostra o iframe
+    paginaTemas.style.display = "block";
+
+    paginaTemas.src = url;
+
+
+    // Mantém o header fixo
+if (header) {
+    header.style.display = "flex";
+    header.style.position = "relative";
+    header.style.top = "";
+    header.style.left = "";
+    header.style.right = "";
+    header.style.bottom = "";
+    header.style.zIndex = "";
+}
+
+}
+
+
+// ======================================
+// VOLTAR PARA DASHBOARD
+// ======================================
+
+function abrirDashboard() {
+
+    // Esconde iframe
+    paginaTemas.style.display = "none";
+
+    paginaTemas.src = "";
+
+
+    // Mostra novamente o dashboard
+    secoesDashboard.forEach(secao => {
+
+        secao.style.display = "";
+
+    });
+
+
+    // Header volta ao comportamento normal
+    if (header) {
+
+        header.style.position = "";
+
+        header.style.top = "";
+
+        header.style.left = "";
+
+        header.style.right = "";
+
+        header.style.bottom = "";
+
+        header.style.zIndex = "";
+
+    }
+
+}
+
+
+// ======================================
+// MARCAR MENU ATIVO
+// ======================================
+
+function marcarMenuAtivo(item) {
+
+    itensMenu.forEach(menu => {
+
+        menu.classList.remove("active");
+
+    });
+
+    item.classList.add("active");
+
+}
+
+
+// ======================================
+// DASHBOARD
+// ======================================
+
+document
+    .getElementById("menuDashboard")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirDashboard();
+
+    });
+
+
+// ======================================
+// PRODUTOS
+// ======================================
+
+document
+    .getElementById("menuProdutos")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("produtos.html");
+
+    });
+
+
+// ======================================
+// NOVO PRODUTO
+// ======================================
+
+document
+    .getElementById("menuNovoProduto")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("novo-produto.html");
+
+    });
+
+
+// ======================================
+// CATEGORIAS
+// ======================================
+
+document
+    .getElementById("menuCategorias")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("categorias.html");
+
+    });
+
+
+// ======================================
+// TEMAS
+// ======================================
+
+document
+    .getElementById("menuTemas")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("temas.html");
+
+    });
+
+
+// ======================================
+// BANNERS
+// ======================================
+
+document
+    .getElementById("menuBanners")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("banners.html");
+
+    });
+
+
+// ======================================
+// PEDIDOS
+// ======================================
+
+document
+    .getElementById("menuPedidos")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("pedidos.html");
+
+    });
+
+
+// ======================================
+// CLIENTES
+// ======================================
+
+document
+    .getElementById("menuClientes")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("clientes.html");
+
+    });
+
+
+// ======================================
+// ESTATÍSTICAS
+// ======================================
+
+document
+    .getElementById("menuEstatisticas")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("estatisticas.html");
+
+    });
+
+
+// ======================================
+// CONFIGURAÇÕES
+// ======================================
+
+document
+    .getElementById("menuConfiguracoes")
+    .addEventListener("click", function() {
+
+        marcarMenuAtivo(this);
+
+        abrirPagina("configuracoes.html");
+
+    });
+
+    // ======================================
+// ÚLTIMOS 2 PRODUTOS
+// ======================================
+
+function carregarUltimosProdutos() {
+
+    const tabela = document.getElementById("ultimosProdutos");
+
+    if (!tabela) return;
+
+    const produtos =
+        JSON.parse(localStorage.getItem("vitrinepro_produtos")) || [];
+
+    // Ordena do mais recente para o mais antigo
+    produtos.sort((a, b) => {
+
+        const dataA = new Date(a.criadoEm || 0);
+        const dataB = new Date(b.criadoEm || 0);
+
+        return dataB - dataA;
+
+    });
+
+    // Pega somente os 2 últimos
+    const ultimos = produtos.slice(0, 3);
+
+    tabela.innerHTML = "";
+
+    // Nenhum produto
+    if (ultimos.length === 0) {
+
+        tabela.innerHTML = `
+            <tr>
+                <td colspan="4" style="text-align:center;">
+                    Nenhum produto cadastrado.
+                </td>
+            </tr>
+        `;
+
+        return;
+    }
+
+    ultimos.forEach(produto => {
+
+        const categoria =
+            produto.categoria || "-";
+
+        const preco =
+            Number(produto.preco || 0)
+                .toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL"
+                });
+
+        const status =
+            produto.ativo === false
+                ? "Inativo"
+                : "Ativo";
+
+        tabela.innerHTML += `
+
+            <tr>
+
+                <td>
+                    ${produto.nome || "-"}
+                </td>
+
+                <td>
+                    ${categoria}
+                </td>
+
+                <td>
+                    ${preco}
+                </td>
+
+                <td>
+                    ${status}
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+}
+
+carregarUltimosProdutos();
+
+window.addEventListener("storage", function(evento) {
+
+    if (evento.key === "vitrinepro_produtos") {
+        carregarUltimosProdutos();
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

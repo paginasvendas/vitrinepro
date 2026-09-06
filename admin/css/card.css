@@ -1,0 +1,131 @@
+/*=========================================
+  CARDS
+=========================================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:20px;
+
+}
+
+.card{
+
+    background:var(--color-card);
+
+    border:1px solid var(--color-border);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-lg);
+
+    border-color:var(--color-primary);
+
+}
+
+/* Barra superior */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--color-primary);
+
+}
+
+/* Título */
+
+.card h3{
+
+    font-size:15px;
+
+    color:var(--text-secondary);
+
+    font-weight:500;
+
+    margin-bottom:15px;
+
+}
+
+/* Valor */
+
+.card span{
+
+    display:block;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:var(--text-primary);
+
+}
+
+/* Hover */
+
+.card:hover span{
+
+    color:var(--color-primary);
+
+}
+
+.card-top{
+
+    display:flex;
+
+    gap: 10px;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.card-top i {
+
+    font-size:28px;
+
+    color:var(--color-primary);
+
+}
+
+.card p{
+
+    margin-top:12px;
+
+    font-size:14px;
+
+    color:var(--color-success);
+
+}

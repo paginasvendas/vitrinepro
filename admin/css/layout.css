@@ -1,0 +1,314 @@
+/*=========================================
+  LAYOUT
+=========================================*/
+
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:var(--sidebar-open) 1fr;
+
+    min-height:100vh;
+
+    transition:grid-template-columns 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+    background:var(--color-background);
+
+}
+
+/* =======================
+   SIDEBAR
+======================= */
+
+.sidebar{
+
+    background:var(--color-sidebar);
+
+    border-right:1px solid var(--color-border);
+
+    display:flex;
+
+    flex-direction:column;
+
+    position:sticky;
+
+    top:0;
+
+    height:100vh;
+
+}
+
+/* =======================
+   CONTEÚDO
+======================= */
+
+.content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:100vh;
+
+}
+
+/* =======================
+   HEADER
+======================= */
+
+.header{
+
+    height:var(--header-height);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    background:var(--color-header);
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+/* =======================
+   TÍTULO
+======================= */
+
+.page-title{
+
+    padding:30px;
+
+}
+
+.page-title p{
+
+    margin-top:8px;
+
+}
+
+/* =======================
+   CARDS
+======================= */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    padding:0 30px 30px;
+
+}
+
+.card{
+
+    min-height:130px;
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.card span{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+    margin-top:10px;
+
+}
+
+/* =======================
+   GRID
+======================= */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:20px;
+
+    padding:0 30px 30px;
+
+}
+
+.chart{
+
+    background:var(--color-card);
+
+    border-radius:var(--radius-lg);
+
+    border:1px solid var(--color-border);
+
+    min-height:350px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--text-muted);
+
+}
+
+/* =======================
+   TABELA
+======================= */
+
+.last-products{
+
+    margin:0 30px 30px;
+
+    background:var(--color-card);
+
+    border-radius:var(--radius-lg);
+
+    border:1px solid var(--color-border);
+
+    padding:25px;
+
+}
+
+.last-products h2{
+
+    margin-bottom:20px;
+
+}
+
+table{
+
+    width:100%;
+
+}
+
+thead{
+
+    background:#1b1b1b;
+
+}
+
+th{
+
+    padding:16px;
+
+    text-align:left;
+
+    color:var(--text-secondary);
+
+}
+
+td{
+
+    padding:16px;
+
+    border-top:1px solid var(--color-border);
+
+}
+
+.container.sidebar-collapse{
+
+    grid-template-columns:var(--sidebar-close) 1fr;
+
+}
+
+.container.sidebar-collapse .logo span{
+
+    opacity:0;
+
+    width:0;
+
+    overflow:hidden;
+
+}
+
+.container.sidebar-collapse .sidebar li span{
+
+    opacity:0;
+
+    width:0;
+
+    overflow:hidden;
+
+}
+
+.container.sidebar-collapse .sidebar li{
+
+    justify-content:center;
+
+    gap:0;
+
+    padding-left:12px;
+
+    padding-right:12px;
+
+}
+
+.container.sidebar-collapse .sidebar-footer button{
+
+    font-size:0;
+
+}
+
+.container.sidebar-collapse .sidebar-footer button i{
+
+    font-size:20px;
+
+}
+
+.logo span{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    opacity:1;
+
+    width:auto;
+
+    overflow:hidden;
+
+    transition:
+        opacity 0.25s ease,
+        width 0.35s ease;
+
+}
+
+.sidebar li span{
+
+    font-size:15px;
+
+    font-weight:500;
+
+    opacity:1;
+
+    width:auto;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    transition:
+        opacity 0.25s ease,
+        width 0.35s ease;
+
+}

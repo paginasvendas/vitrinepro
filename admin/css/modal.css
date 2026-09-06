@@ -1,0 +1,223 @@
+/* ===========================
+   MODAL
+=========================== */
+
+.modal-overlay{
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.55);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    backdrop-filter: blur(4px);
+
+}
+
+.modal-overlay.active{
+
+    display:flex;
+
+}
+
+.modal{
+
+    width:420px;
+
+    max-width:92%;
+
+    background:#ffffff;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    text-align:center;
+
+    animation:modalShow .25s ease;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+}
+
+.modal-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.modal-success{
+
+    background:#e9f9ef;
+
+    color:#1e9c4b;
+
+}
+
+.modal-error{
+
+    background:#fdecec;
+
+    color:#d93025;
+
+}
+
+.modal-warning{
+
+    background:#fff6df;
+
+    color:#f4a000;
+
+}
+
+.modal h2{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.modal p{
+
+    color:#666;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+
+}
+
+.modal button{
+
+    border:none;
+
+    padding:12px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.modal button:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.9;
+
+}
+
+@keyframes modalShow{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+#modalBotoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+}
+
+#btnCancelar{
+
+    background:#6b7280;
+
+}
+
+#btnConfirmar{
+
+    background:#dc2626;
+
+}
+
+/* ==========================================
+FORMULÁRIO DO MODAL
+========================================== */
+
+.form-modal{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.form-modal label{
+
+    text-align:left;
+
+    font-weight:600;
+
+}
+
+.form-modal input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #d1d5db;
+
+    font-size:15px;
+
+}

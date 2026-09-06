@@ -1,0 +1,325 @@
+@import url("produtos.css");
+
+/* ===========================
+MODAL CATEGORIAS
+=========================== */
+
+.modal-categoria{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:999;
+
+}
+
+.modal-categoria.active{
+
+    display:flex;
+
+}
+
+.modal-box{
+
+    width:95%;
+
+    max-width:500px;
+
+    background:#1f1f1f;
+
+    border-radius:16px;
+
+    padding:30px;
+
+}
+
+.modal-box h2{
+
+    margin-bottom:25px;
+
+}
+
+.modal-box input{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    border:1px solid #333;
+
+    background:#282828;
+
+    color:#fff;
+
+}
+
+.acoes-modal button{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+.btn-cancelar{
+
+    background:#6b7280;
+
+    color:#fff;
+
+}
+
+.btn-salvar{
+
+    background:#d72638;
+
+    color:#fff;
+
+}
+
+.modal-box label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* =====================================
+SLUG
+===================================== */
+
+.campo-slug{
+
+    position:relative;
+
+    margin-bottom:10px;
+
+}
+
+.campo-slug input{
+
+    width:100%;
+
+    padding:14px 42px 14px 14px;
+
+    border-radius:10px;
+
+    border:1px solid #333;
+
+    background:#202020;
+
+    color:#9ca3af;
+
+    cursor:not-allowed;
+
+}
+
+.campo-slug i{
+
+    position:absolute;
+
+    right:14px;
+
+    top:35%;
+
+    transform:translateY(-50%);
+
+    color:#888;
+
+    pointer-events:none;
+
+}
+
+.info-slug{
+
+    display:block;
+
+    margin-top:-5px;
+
+    margin-bottom:18px;
+
+    color:#9ca3af;
+
+    font-size:12px;
+
+    font-style:italic;
+
+}
+
+/* =====================================
+BOTÕES DO MODAL
+===================================== */
+
+.acoes-modal{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.btn-cancelar{
+
+    background:#6b7280;
+
+    color:#fff;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btn-cancelar:hover{
+
+    opacity:.9;
+
+}
+
+.btn-salvar{
+
+    background:#d72638;
+
+    color:#fff;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.btn-salvar:hover{
+
+    opacity:.9;
+
+}
+
+/* =====================================
+TOGGLE SWITCH
+===================================== */
+
+.switch-label{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:18px 0;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:48px;
+
+    height:20px;
+
+}
+
+.switch input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    cursor:pointer;
+
+    inset:0;
+
+    background:#6b7280;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:15px;
+
+    height:15px;
+
+    left:3px;
+
+    top:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.25);
+
+}
+
+.switch input:checked + .slider{
+
+    background:#2563eb;
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(26px);
+
+}

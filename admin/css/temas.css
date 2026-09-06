@@ -1,0 +1,695 @@
+/*=====================================
+TEMAS
+=====================================*/
+
+body > div > div.page-header {
+margin-bottom: 30px;
+}
+
+body > div {
+    padding: 30px;
+}
+
+.cards-temas{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.card-tema{
+
+    background:#1d1d1d;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+    border:2px solid transparent;
+
+    text-align:center;
+
+}
+
+.card-tema:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#d72638;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.30);
+
+}
+
+.card-tema .icone{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.card-tema h2{
+
+    color:#fff;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+.card-tema p{
+
+    color:#bdbdbd;
+
+    font-size:15px;
+
+}
+
+.info-tema{
+
+    margin:25px 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.info-tema span{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#d5d5d5;
+
+    font-size:15px;
+
+}
+
+.info-tema strong{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+}
+
+.btn-gerenciar{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#d72638;
+
+    color:#fff;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.btn-gerenciar:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.90;
+
+}
+
+/*=====================================
+BOTÃO VOLTAR
+=====================================*/
+
+.btn-voltar-tema{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#2b2b2b;
+
+    color:#ffffff;
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+    margin-bottom:25px;
+
+}
+
+.btn-voltar-tema:hover{
+
+    background:#3b3b3b;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/*=====================================
+BREADCRUMB
+=====================================*/
+
+.breadcrumb{
+
+    font-size:15px;
+
+    color:#9ca3af;
+
+    margin:20px 0;
+
+}
+
+.breadcrumb strong{
+
+    color:#ffffff;
+
+}
+
+#conteudoTema{
+
+    margin-top:20px;
+
+}
+
+/* ======================================
+   ESTRUTURA DO TEMA
+====================================== */
+
+#estruturaTema {
+    margin-top: 30px;
+}
+
+
+.estrutura-tema {
+    width: 100%;
+}
+
+
+.estrutura-cabecalho {
+    margin-bottom: 25px;
+}
+
+
+.estrutura-cabecalho h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+
+/* ======================================
+   CATEGORIAS
+====================================== */
+
+.estrutura-categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.estrutura-categoria {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid #2d2d2d;
+}
+
+
+.estrutura-categoria-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.estrutura-categoria-titulo h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+.estrutura-icone {
+    font-size: 24px;
+}
+
+
+/* ======================================
+   ORIGEM
+====================================== */
+
+.badge-sistema,
+.badge-personalizado {
+    font-size: 11px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    margin-left: auto;
+}
+
+
+.badge-sistema {
+    background: #333;
+    color: #ccc;
+}
+
+
+.badge-personalizado {
+    background: #244f2c;
+    color: #9cffad;
+}
+
+
+/* ======================================
+   SUBCATEGORIAS
+====================================== */
+
+.estrutura-subcategorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+
+.estrutura-subcategoria {
+    background: #242424;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #333;
+}
+
+
+.estrutura-subcategoria-titulo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+
+.estrutura-subcategoria-titulo span {
+    font-size: 20px;
+}
+
+
+/* ======================================
+   TIPOS DE PRODUTO
+====================================== */
+
+.estrutura-tipos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.estrutura-tipo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #303030;
+
+    padding: 9px 11px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+}
+
+
+.estrutura-sem-tipos {
+    color: #888;
+    font-size: 13px;
+}
+
+
+.estrutura-vazio {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* ======================================
+   MODAL VITRINEPRO
+   ====================================== */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: opacity 0.2s ease,
+                visibility 0.2s ease;
+
+    z-index: 99999;
+
+}
+
+
+.modal-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+/* ======================================
+   CAIXA DO MODAL
+   ====================================== */
+
+.modal {
+
+    width: min(460px, 100%);
+
+    background: #fff;
+
+    border: 1px solid #383838;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55);
+
+    transform: translateY(15px) scale(0.97);
+
+    transition: transform 0.2s ease;
+
+}
+
+
+.modal-overlay.active .modal {
+
+    transform: translateY(0) scale(1);
+
+}
+
+
+/* ======================================
+   ÍCONE
+   ====================================== */
+
+.modal-icon {
+
+    width: 80px;
+
+    height: 80px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+/* SUCESSO */
+
+.modal-success {
+
+    background: #e9f9ef;
+    color: #1e9c4b;
+
+}
+
+
+/* ERRO */
+
+.modal-error {
+
+    background: rgba(231, 76, 60, 0.15);
+
+    color: #e74c3c;
+
+    border: 2px solid #e74c3c;
+
+}
+
+
+/* AVISO */
+
+.modal-warning {
+
+    background: rgba(241, 196, 15, 0.15);
+
+    color: #f1c40f;
+
+    border: 2px solid #f1c40f;
+
+}
+
+
+/* ======================================
+   TÍTULO
+   ====================================== */
+
+.modal h2 {
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+
+/* ======================================
+   MENSAGEM
+   ====================================== */
+
+.modal p {
+
+    margin: 0 auto 25px;
+
+    color: #666;
+
+    font-size: var(--font-size-md);
+
+    line-height: 1.6;
+
+}
+
+
+/* ======================================
+   BOTÕES
+   ====================================== */
+
+#modalBotoes {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+
+#modalBotoes button {
+
+    min-width: 110px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 11px 20px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+
+}
+
+
+#modalBotoes button:hover {
+
+    transform: translateY(-1px);
+
+    opacity: 0.9;
+
+}
+
+
+/* ======================================
+   BOTÃO OK
+   ====================================== */
+
+#modalOk {
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+}
+
+
+/* ======================================
+   BOTÃO CANCELAR
+   ====================================== */
+
+#btnCancelar {
+
+    background: #444444;
+
+    color: #ffffff;
+
+}
+
+
+/* ======================================
+   BOTÃO CONFIRMAR
+   ====================================== */
+
+#btnConfirmar {
+
+    background: #e74c3c;
+
+    color: #ffffff;
+
+}
+
+
+/* ======================================
+   RESPONSIVO
+   ====================================== */
+
+@media (max-width: 500px) {
+
+    .modal {
+
+        padding: 24px 20px;
+
+        border-radius: 15px;
+
+    }
+
+    .modal h2 {
+
+        font-size: 20px;
+
+    }
+
+    #modalBotoes {
+
+        flex-direction: column;
+
+    }
+
+    #modalBotoes button {
+
+        width: 100%;
+
+    }
+
+}
+
+
+#btnSelecionarTema {
+transition: var(--transition);
+    color: #fff;
+    height: 40px;
+    border-radius: 12px;
+    background: #202020;
+    color: #fff;
+    padding-inline: 15px;
+}
+
+.estrutura-cabecalho {
+    margin-bottom: 25px;
+    display: inline-flex;
+    gap: 15px;
+}
+
+#modalTitulo {
+    color: red;
+}
+
+

@@ -1,0 +1,92 @@
+/* ==========================
+   RESET CSS
+   VitrinePro
+========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:'Poppins',sans-serif;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+picture{
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+input,
+textarea,
+select{
+
+    border:none;
+
+    outline:none;
+
+    font-family:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+table{
+
+    border-collapse:collapse;
+
+    width:100%;
+
+}
