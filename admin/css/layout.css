@@ -358,4 +358,22 @@ td{
 
     }
 
+    .menu-btn{
+    width:48px !important;
+    height:48px !important;
+
+    min-width:48px !important;
+    min-height:48px !important;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0 !important;
+}
+
+.search {
+    gap: 0px!important;
+}
+
 }
