@@ -207,3 +207,48 @@ RODAPÉ SIDEBAR
     background:var(--color-primary);
 
 }
+
+/*=========================================
+  SIDEBAR MOBILE
+=========================================*/
+
+@media (max-width: 768px){
+
+    .container{
+        display:block;
+        position:relative;
+        min-height:100vh;
+    }
+
+    .sidebar{
+
+        position:fixed;
+
+        top:0;
+        left:-280px;
+
+        width:260px;
+        min-width:260px;
+
+        height:100vh;
+
+        z-index:10000;
+
+        transition:left 0.35s ease;
+
+    }
+
+    .sidebar.active{
+
+        left:0;
+
+    }
+
+    .content{
+
+        width:100%;
+        min-height:100vh;
+
+    }
+
+}
