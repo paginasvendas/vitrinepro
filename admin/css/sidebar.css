@@ -235,7 +235,7 @@ RODAPÉ SIDEBAR
 
         z-index:10000;
 
-        transition:left 0.35s ease;
+        transition:left 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 
     }
 

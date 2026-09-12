@@ -370,6 +370,10 @@ function abrirPagina(url) {
 
     paginaTemas.src = url;
 
+    if(window.innerWidth <= 768){
+    sidebar.classList.remove("active");
+}
+
 
     // Mantém o header fixo
 if (header) {
@@ -451,6 +455,10 @@ document
     .addEventListener("click", function() {
 
         marcarMenuAtivo(this);
+
+        if(window.innerWidth <= 768){
+            sidebar.classList.remove("active");
+        }
 
         abrirDashboard();
 
@@ -684,6 +692,27 @@ window.addEventListener("storage", function(evento) {
 
     if (evento.key === "vitrinepro_produtos") {
         carregarUltimosProdutos();
+    }
+
+});
+
+// FECHAR MENU MOBILE
+document.addEventListener("click", function(evento){
+
+    if(window.innerWidth > 768) return;
+
+    const sidebar = document.querySelector(".sidebar");
+    const menuBtn = document.querySelector(".menu-btn");
+
+    if(!sidebar || !menuBtn) return;
+
+    if(!sidebar.classList.contains("active")) return;
+
+    const clicouNaSidebar = sidebar.contains(evento.target);
+    const clicouNoMenu = menuBtn.contains(evento.target);
+
+    if(!clicouNaSidebar && !clicouNoMenu){
+        sidebar.classList.remove("active");
     }
 
 });
