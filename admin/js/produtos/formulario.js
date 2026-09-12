@@ -604,7 +604,7 @@ if (formulario.categoria) {
 
                 formulario.tipoProduto.innerHTML = `
                     <option value="">
-                        Selecione uma subcategoria primeiro
+                        Selecione uma subcategoria
                     </option>
                 `;
 

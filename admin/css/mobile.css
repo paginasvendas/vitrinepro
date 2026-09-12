@@ -30,3 +30,39 @@
 
 }
 
+/* =========================================
+   TABELA RESPONSIVA - MOBILE
+========================================= */
+
+@media (max-width: 768px){
+
+    .last-products{
+        margin:0 24px 24px;
+        padding:16px;
+        overflow:hidden;
+    }
+
+    .last-products h2{
+        font-size:22px;
+        margin-bottom:16px;
+    }
+
+    .last-products table{
+        width:100%;
+        min-width:600px;
+        border-collapse:collapse;
+    }
+
+    .last-products{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .last-products th,
+    .last-products td{
+        padding:12px 14px;
+        white-space:nowrap;
+        font-size:14px;
+    }
+
+}
