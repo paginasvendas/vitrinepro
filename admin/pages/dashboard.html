@@ -147,15 +147,18 @@
 
             <div class="header-right">
 
-                            <div class="search">
+<div class="search">
 
-                <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
 
-                <input
-                       type="text"
-                       placeholder=" ">
+    <input
+        id="campoBusca"
+        type="text"
+        placeholder="Pesquisar...">
 
-            </div>
+    <div id="sugestoesBusca" class="sugestoes-busca"></div>
+
+</div>
 
                 <button>
 
@@ -760,6 +763,513 @@ document.addEventListener("click", function(){
         }
 
     });
+
+});
+
+
+
+const campoBusca =
+    document.getElementById("campoBusca");
+
+const sugestoesBusca =
+    document.getElementById("sugestoesBusca");
+
+
+/* =========================================
+   PÁGINAS DO SISTEMA
+========================================= */
+
+const paginas = [
+
+    {
+        nome: "Dashboard",
+        palavras: "dashboard inicio painel",
+        icone: "fa-house",
+        url: null
+    },
+
+    {
+        nome: "Produtos",
+        palavras: "produto produtos",
+        icone: "fa-box",
+        url: "produtos.html"
+    },
+
+    {
+        nome: "Novo Produto",
+        palavras: "novo produto cadastrar adicionar",
+        icone: "fa-plus",
+        url: "novo-produto.html"
+    },
+
+    {
+        nome: "Categorias",
+        palavras: "categoria categorias",
+        icone: "fa-folder-open",
+        url: "categorias.html"
+    },
+
+    {
+        nome: "Temas",
+        palavras: "tema temas loja aparência",
+        icone: "fa-store",
+        url: "temas.html"
+    },
+
+    {
+        nome: "Banners",
+        palavras: "banner banners imagens",
+        icone: "fa-image",
+        url: "banners.html"
+    },
+
+    {
+        nome: "Pedidos",
+        palavras: "pedido pedidos vendas",
+        icone: "fa-cart-arrow-down",
+        url: "pedidos.html"
+    },
+
+    {
+        nome: "Clientes",
+        palavras: "cliente clientes usuários",
+        icone: "fa-users",
+        url: "clientes.html"
+    },
+
+    {
+        nome: "Estatísticas",
+        palavras: "estatistica estatísticas gráficos vendas",
+        icone: "fa-chart-line",
+        url: "estatisticas.html"
+    },
+
+    {
+        nome: "Configurações",
+        palavras: "configuração configurações ajustes",
+        icone: "fa-gear",
+        url: "configuracoes.html"
+    }
+
+];
+
+
+/* =========================================
+   DIGITAÇÃO
+========================================= */
+
+function extrairTexto(objeto) {
+
+    if (objeto === null || objeto === undefined) {
+        return "";
+    }
+
+
+    if (
+        typeof objeto === "string" ||
+        typeof objeto === "number"
+    ) {
+
+        return String(objeto);
+
+    }
+
+
+    if (Array.isArray(objeto)) {
+
+        return objeto
+            .map(item => extrairTexto(item))
+            .join(" ");
+
+    }
+
+
+    if (typeof objeto === "object") {
+
+        return Object.entries(objeto)
+            .map(([chave, valor]) => {
+
+                // Não precisamos pesquisar IDs internos
+                if (chave === "id") {
+                    return "";
+                }
+
+                return extrairTexto(valor);
+
+            })
+            .join(" ");
+
+    }
+
+
+    return "";
+
+}
+
+function buscarProdutos(termo) {
+
+    const produtos =
+        JSON.parse(
+            localStorage.getItem("vitrinepro_produtos")
+        ) || [];
+
+    const categorias =
+        JSON.parse(
+            localStorage.getItem("vitrinepro_categorias")
+        ) || [];
+
+    const resultados = [];
+
+
+    // =========================================
+    // PRODUTOS
+    // =========================================
+
+    produtos.forEach(produto => {
+
+        const textoProduto =
+            extrairTexto(produto)
+                .toLowerCase();
+
+        if (textoProduto.includes(termo)) {
+
+            resultados.push({
+                tipo: "produto",
+                dados: produto
+            });
+
+        }
+
+    });
+
+
+    // =========================================
+    // CATEGORIAS
+    // =========================================
+
+    categorias.forEach(categoria => {
+
+        /*
+         * Procura diretamente nos principais campos
+         * da categoria.
+         */
+
+        const textoCategoria = [
+
+            categoria.nome,
+            categoria.slug,
+            categoria.descricao
+
+        ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+
+
+        if (textoCategoria.includes(termo)) {
+
+            resultados.push({
+
+                tipo: "categoria",
+
+                dados: categoria
+
+            });
+
+        }
+
+
+        // =========================================
+        // SUBCATEGORIAS
+        // =========================================
+
+        const subcategorias =
+            categoria.subcategorias || [];
+
+
+        subcategorias.forEach(subcategoria => {
+
+            const textoSubcategoria = [
+
+                subcategoria.nome,
+                subcategoria.slug,
+                subcategoria.descricao
+
+            ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase();
+
+
+            if (textoSubcategoria.includes(termo)) {
+
+                resultados.push({
+
+                    tipo: "subcategoria",
+
+                    dados: subcategoria,
+
+                    categoria: categoria
+
+                });
+
+            }
+
+
+            // =====================================
+            // TIPOS DE PRODUTO
+            // =====================================
+
+            const tiposProduto =
+                subcategoria.tiposProduto || [];
+
+
+            tiposProduto.forEach(tipoProduto => {
+
+                const textoTipoProduto = [
+
+                    tipoProduto.nome,
+                    tipoProduto.slug,
+                    tipoProduto.descricao
+
+                ]
+                .filter(Boolean)
+                .join(" ")
+                .toLowerCase();
+
+
+                if (textoTipoProduto.includes(termo)) {
+
+                    resultados.push({
+
+                        tipo: "tipoProduto",
+
+                        dados: tipoProduto,
+
+                        subcategoria: subcategoria,
+
+                        categoria: categoria
+
+                    });
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    return resultados;
+
+}
+
+
+campoBusca.addEventListener("input", function() {
+
+    const busca =
+        this.value
+            .toLowerCase()
+            .trim();
+
+    sugestoesBusca.innerHTML = "";
+
+
+    // =========================================
+    // BUSCA VAZIA
+    // =========================================
+
+    if (!busca) {
+
+        sugestoesBusca.style.display = "none";
+
+        return;
+
+    }
+
+
+    // =========================================
+    // BUSCAR PÁGINAS
+    // =========================================
+
+    const resultadosPaginas =
+        paginas.filter(pagina =>
+
+            pagina.nome
+                .toLowerCase()
+                .includes(busca)
+
+            ||
+
+            pagina.palavras
+                .toLowerCase()
+                .includes(busca)
+
+        );
+
+
+    // =========================================
+    // BUSCAR PRODUTOS
+    // =========================================
+
+    const produtosEncontrados =
+        buscarProdutos(busca);
+
+
+    // =========================================
+    // NENHUM RESULTADO
+    // =========================================
+
+    if (
+        resultadosPaginas.length === 0 &&
+        produtosEncontrados.length === 0
+    ) {
+
+        sugestoesBusca.innerHTML = `
+
+            <div class="sugestao-item">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <span>
+                    Nenhum resultado encontrado
+                </span>
+
+            </div>
+
+        `;
+
+        sugestoesBusca.style.display = "block";
+
+        return;
+
+    }
+
+
+    // =========================================
+    // PÁGINAS
+    // =========================================
+
+    resultadosPaginas.forEach(pagina => {
+
+        const item =
+            document.createElement("div");
+
+        item.className =
+            "sugestao-item";
+
+
+        item.innerHTML = `
+
+            <i class="fa-solid ${pagina.icone}"></i>
+
+            <span>
+                ${pagina.nome}
+            </span>
+
+        `;
+
+
+        item.addEventListener("click", function() {
+
+            if (pagina.url) {
+
+                abrirPagina(pagina.url);
+
+            } else {
+
+                abrirDashboard();
+
+            }
+
+
+            campoBusca.value = "";
+
+            sugestoesBusca.innerHTML = "";
+
+            sugestoesBusca.style.display = "none";
+
+        });
+
+
+        sugestoesBusca.appendChild(item);
+
+    });
+
+
+    // =========================================
+    // PRODUTOS
+    // =========================================
+
+    produtosEncontrados.forEach(produto => {
+
+        const item =
+            document.createElement("div");
+
+        item.className =
+            "sugestao-item";
+
+
+        item.innerHTML = `
+
+            <i class="fa-solid fa-box"></i>
+
+            <div>
+
+                <strong>
+                    ${produto.nome || "Produto"}
+                </strong>
+
+                <small>
+                    ${produto.categoria || ""}
+                </small>
+
+            </div>
+
+        `;
+
+
+        item.addEventListener("click", function() {
+
+            // Abre a página de produtos
+            abrirPagina("produtos.html");
+
+
+            campoBusca.value = "";
+
+            sugestoesBusca.innerHTML = "";
+
+            sugestoesBusca.style.display = "none";
+
+        });
+
+
+        sugestoesBusca.appendChild(item);
+
+    });
+
+
+    sugestoesBusca.style.display = "block";
+
+});
+
+
+/* =========================================
+   ESC
+========================================= */
+
+campoBusca.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        campoBusca.value = "";
+
+        sugestoesBusca.innerHTML = "";
+
+        sugestoesBusca.style.display = "none";
+
+    }
 
 });
 

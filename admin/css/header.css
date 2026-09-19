@@ -14,7 +14,7 @@
 
     padding: 0 30px;
 
-    height: 80px;
+    height: 85px;
 
     background: var(--color-header);
 
@@ -219,5 +219,262 @@ USUÁRIO
     color:var(--text-secondary);
 
     font-size:12px;
+
+}
+
+/* =========================================
+   RESULTADOS DA BUSCA
+========================================= */
+
+.sugestoes-busca {
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+
+    left: 0;
+
+    width: 100%;
+
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    background: #202020;
+
+    border: 1px solid #333;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+
+    z-index: 9999;
+
+    display: none;
+
+}
+
+
+/* =========================================
+   CADA RESULTADO
+========================================= */
+
+.sugestao-item {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        padding .2s ease;
+
+}
+
+
+/* ÍCONE */
+
+.sugestao-item > i {
+
+    flex-shrink: 0;
+
+    width: 22px;
+
+    text-align: center;
+
+    color: var(--color-primary);
+
+    font-size: 17px;
+
+}
+
+
+/* ÁREA DO TEXTO */
+
+.sugestao-item > div {
+
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+/* NOME */
+
+.sugestao-item strong {
+
+    display: block;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* INFORMAÇÃO SECUNDÁRIA */
+
+.sugestao-item small {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 12px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+/* HOVER */
+
+.sugestao-item:hover {
+
+    background: #2b2b2b;
+
+}
+
+
+/* =========================================
+   SCROLL
+========================================= */
+
+.sugestoes-busca::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+.sugestoes-busca::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+.sugestoes-busca::-webkit-scrollbar-thumb {
+
+    background: #444;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sugestoes-busca {
+
+        position: fixed;
+
+        top: 80px;
+
+        left: 10px;
+
+        right: 10px;
+
+        width: auto;
+
+        max-height: calc(100vh - 100px);
+
+        border-radius: 12px;
+
+    }
+
+    .sugestao-item {
+
+        min-height: 60px;
+
+        padding: 13px 15px;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 480px) {
+
+    .sugestoes-busca {
+
+        top: 70px;
+
+        left: 8px;
+
+        right: 8px;
+
+        max-height: calc(100vh - 85px);
+
+    }
+
+    .sugestao-item {
+
+        min-height: 56px;
+
+        padding: 11px 13px;
+
+        gap: 10px;
+
+    }
+
+    .sugestao-item > i {
+
+        width: 20px;
+
+        font-size: 16px;
+
+    }
+
+    .sugestao-item strong {
+
+        font-size: 13px;
+
+    }
+
+    .sugestao-item small {
+
+        font-size: 11px;
+
+    }
 
 }
