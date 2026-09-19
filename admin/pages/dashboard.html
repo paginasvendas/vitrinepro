@@ -724,6 +724,10 @@ document.addEventListener("click", function(evento){
 
 
 //PESQUISAR
+// =========================================
+// PESQUISA
+// =========================================
+
 document.querySelectorAll(".search").forEach(function(search){
 
     const icone = search.querySelector("i");
@@ -733,21 +737,53 @@ document.querySelectorAll(".search").forEach(function(search){
 
         evento.stopPropagation();
 
+        const termo = input.value.trim();
+
+
+        // =====================================
+        // JÁ TEM TEXTO → EXECUTA A PESQUISA
+        // =====================================
+
+        if (termo) {
+
+            realizarBusca(termo);
+
+            return;
+
+        }
+
+
+        // =====================================
+        // SEM TEXTO → ABRE A PESQUISA
+        // =====================================
+
         search.classList.toggle("active");
 
-        if(search.classList.contains("active")){
+        if (search.classList.contains("active")) {
+
             input.focus();
-        }else{
+
+        } else {
+
             input.value = "";
+
+            sugestoesBusca.innerHTML = "";
+
+            sugestoesBusca.style.display = "none";
+
         }
 
     });
 
+
+    // Não fecha ao clicar dentro da pesquisa
     search.addEventListener("click", function(evento){
+
         evento.stopPropagation();
+
     });
 
-});
+}); 
 
 
 document.addEventListener("click", function(){
@@ -1062,6 +1098,152 @@ function buscarProdutos(termo) {
 
 
     return resultados;
+
+}
+
+// =========================================
+// EXECUTAR PESQUISA
+// =========================================
+
+function realizarBusca(termo) {
+
+    termo =
+        String(termo)
+            .toLowerCase()
+            .trim();
+
+
+    if (!termo) {
+        return;
+    }
+
+
+    // Busca páginas
+    const resultadosPaginas =
+        paginas.filter(pagina =>
+
+            pagina.nome
+                .toLowerCase()
+                .includes(termo)
+
+            ||
+
+            pagina.palavras
+                .toLowerCase()
+                .includes(termo)
+
+        );
+
+
+    // Busca produtos,
+    // categorias,
+    // subcategorias
+    // e tipos de produto
+    const resultados =
+        buscarProdutos(termo);
+
+
+    // =========================================
+    // SE ENCONTROU UMA PÁGINA
+    // =========================================
+
+    if (resultadosPaginas.length > 0) {
+
+        const pagina =
+            resultadosPaginas[0];
+
+
+        if (pagina.url) {
+
+            abrirPagina(pagina.url);
+
+        } else {
+
+            abrirDashboard();
+
+        }
+
+        fecharPesquisa();
+
+        return;
+
+    }
+
+
+    // =========================================
+    // ENCONTROU PRODUTO/CATEGORIA ETC.
+    // =========================================
+
+    if (resultados.length > 0) {
+
+        const primeiroResultado =
+            resultados[0];
+
+
+        if (
+            primeiroResultado.tipo === "produto"
+        ) {
+
+            abrirPagina("produtos.html");
+
+        }
+
+        else if (
+            primeiroResultado.tipo === "categoria"
+            ||
+            primeiroResultado.tipo === "subcategoria"
+            ||
+            primeiroResultado.tipo === "tipoProduto"
+        ) {
+
+            abrirPagina("categorias.html");
+
+        }
+
+
+        fecharPesquisa();
+
+        return;
+
+    }
+
+
+    // =========================================
+    // NENHUM RESULTADO
+    // =========================================
+
+    sugestoesBusca.innerHTML = `
+
+        <div class="sugestao-item">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <span>
+                Nenhum resultado encontrado
+            </span>
+
+        </div>
+
+    `;
+
+    sugestoesBusca.style.display = "block";
+
+}
+
+function fecharPesquisa() {
+
+    document
+        .querySelectorAll(".search.active")
+        .forEach(function(search) {
+
+            search.classList.remove("active");
+
+        });
+
+
+    sugestoesBusca.innerHTML = "";
+
+    sugestoesBusca.style.display = "none";
 
 }
 

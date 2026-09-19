@@ -99,6 +99,7 @@ PESQUISA
 .search i{
 
     color:var(--text-muted);
+        cursor: pointer;
 
 }
 
