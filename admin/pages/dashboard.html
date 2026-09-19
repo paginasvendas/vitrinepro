@@ -143,7 +143,11 @@
 
             </button>
 
-            <div class="search">
+
+
+            <div class="header-right">
+
+                            <div class="search">
 
                 <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -152,8 +156,6 @@
                        placeholder=" ">
 
             </div>
-
-            <div class="header-right">
 
                 <button>
 
@@ -714,6 +716,50 @@ document.addEventListener("click", function(evento){
     if(!clicouNaSidebar && !clicouNoMenu){
         sidebar.classList.remove("active");
     }
+
+});
+
+
+//PESQUISAR
+document.querySelectorAll(".search").forEach(function(search){
+
+    const icone = search.querySelector("i");
+    const input = search.querySelector("input");
+
+    icone.addEventListener("click", function(evento){
+
+        evento.stopPropagation();
+
+        search.classList.toggle("active");
+
+        if(search.classList.contains("active")){
+            input.focus();
+        }else{
+            input.value = "";
+        }
+
+    });
+
+    search.addEventListener("click", function(evento){
+        evento.stopPropagation();
+    });
+
+});
+
+
+document.addEventListener("click", function(){
+
+    document.querySelectorAll(".search.active").forEach(function(search){
+
+        search.classList.remove("active");
+
+        const input = search.querySelector("input");
+
+        if(input){
+            input.value = "";
+        }
+
+    });
 
 });
 
