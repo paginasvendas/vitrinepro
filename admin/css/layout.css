@@ -406,6 +406,9 @@ td{
 
 .search.active i{
     z-index:3;
+    left: auto;
+    right: 45px;
+    position: fixed;
 }
 
     .dashboard-grid {
@@ -483,17 +486,3 @@ display: none!important;
 }
 
 
-@media (max-width: 432px){
-.search input {
-    display: none!important;
-}
-
-}
-
-@media (max-min: 434px){
-
-.search {
-    gap: 12px!important;
-}
-
-}
