@@ -16,6 +16,8 @@
 
         promocao: document.getElementById("promocaoProduto"),
 
+        custo: document.getElementById("custoProduto"),
+
         estoque: document.getElementById("estoqueProduto"),
 
         descricao: document.getElementById("descricaoProduto"),
@@ -279,6 +281,8 @@ tipoProdutoId: formulario.tipoProduto.value,
         preco: Number(formulario.preco.value),
 
         promocao: Number(formulario.promocao.value),
+
+        custo: Number(formulario.custo.value),
 
         estoque: Number(formulario.estoque.value),
 
@@ -990,6 +994,8 @@ else {
 
         formulario.promocao.value = "";
 
+        formulario.custo.value = "";
+
         formulario.estoque.value = "";
 
         formulario.descricao.value = "";
@@ -1080,6 +1086,9 @@ function carregarProdutoEdicao(){
 
     formulario.promocao.value =
         produto.promocao || "";
+
+        formulario.custo.value =
+    produto.custo || "";
 
     formulario.estoque.value =
         produto.estoque || "";

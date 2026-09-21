@@ -57,7 +57,7 @@ LOGO
 
     font-weight:700;
 
-    color:#fff;
+    color: var(--color-primary);
 
 }
 

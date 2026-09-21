@@ -42,7 +42,7 @@ function carregarProdutos(){
 
             <tr>
 
-                <td colspan="13" style="text-align:center;padding:40px;">
+                <td colspan="14" style="text-align:center;padding:40px;">
 
                     Nenhum produto cadastrado.
 
@@ -92,6 +92,10 @@ function carregarProdutos(){
             ? `R$ ${Number(produto.promocao).toFixed(2).replace(".", ",")}`
             : "-"
     }
+</td>
+
+<td>
+    R$ ${Number(produto.custo || 0).toFixed(2).replace(".", ",")}
 </td>
 
                 <td>${produto.estoque}</td>

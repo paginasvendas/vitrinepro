@@ -49,6 +49,7 @@
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/card.css">
 <link rel="stylesheet" href="../css/mobile.css">
+<link rel="stylesheet" href="../css/graficos.css">
 
 </head>
 
@@ -298,21 +299,35 @@
 
         <!-- GRÁFICOS -->
 
-        <section class="dashboard-grid">
+<section class="dashboard-grid">
 
-            <div class="chart">
+    <div class="chart">
 
-                Gráfico de vendas
+        <h3>Gráfico de vendas</h3>
 
-            </div>
+        <canvas id="graficoVendas"></canvas>
 
-            <div class="chart">
+    </div>
 
-                Produtos mais vendidos
 
-            </div>
+<div class="chart chart-lucrativos">
 
-        </section>
+    <div class="chart-header">
+        <h2>Produtos mais Lucrativos</h2>
+        <span>Top 10</span>
+    </div>
+
+    <div class="grafico-colunas" id="graficoProdutosLucrativos">
+
+        <div class="grafico-vazio">
+            Nenhum produto vendido ainda.
+        </div>
+
+    </div>
+
+</div>
+
+</section>
 
         <!-- TABELA -->
 
@@ -352,6 +367,7 @@
 <script src="../js/components/menu.js"></script>
 <script src="../js/core/app.js"></script>
 <script src="../js/core/theme.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
 
@@ -1470,6 +1486,8 @@ campoBusca.addEventListener("keydown", function(event) {
 });
 
 </script>
+
+<script src="../js/dashboard.js"></script>
 
 </body>
 

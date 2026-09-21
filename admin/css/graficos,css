@@ -1,0 +1,331 @@
+/* ======================================
+   GRÁFICOS DO DASHBOARD
+====================================== */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    margin-top: 25px;
+
+}
+
+
+/* ======================================
+   CARD DO GRÁFICO
+====================================== */
+
+.chart {
+
+    position: relative;
+
+    background: var(--color-card);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    min-height: 400px;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+/* ======================================
+   TÍTULO
+====================================== */
+
+.chart h3 {
+
+    margin: 0 0 25px;
+
+    color: var(--text-primary);
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+
+/* ======================================
+   CANVAS
+====================================== */
+
+.chart canvas {
+
+    display: block;
+
+    width: 100% !important;
+
+    height: 320px !important;
+
+}
+
+
+/* ======================================
+   TEMA CLARO
+====================================== */
+
+body.light-mode .chart {
+
+    background: var(--color-card);
+
+    border-color: var(--color-border);
+
+}
+
+
+/* ======================================
+   RESPONSIVO
+====================================== */
+
+@media (max-width: 900px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .chart {
+
+        padding: 18px;
+
+        min-height: 350px;
+
+    }
+
+
+    .chart canvas {
+
+        height: 280px !important;
+
+    }
+
+}
+
+/* =========================================
+   GRÁFICO DE PRODUTOS MAIS LUCRATIVOS
+========================================= */
+
+.chart-lucrativos {
+    min-height: 400px;
+    padding: 25px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.chart-header h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.chart-header span {
+    background: #d72638;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ÁREA DO GRÁFICO
+========================================= */
+
+.grafico-colunas {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 14px;
+
+    padding: 20px 10px 0;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================
+   COLUNA
+========================================= */
+
+.coluna-lucro {
+    flex: 1;
+
+    min-width: 55px;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* =========================================
+   VALOR DO LUCRO
+========================================= */
+
+.coluna-lucro-valor {
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    margin-bottom: 6px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   BARRA
+========================================= */
+
+.coluna-lucro-barra {
+    width: 100%;
+    max-width: 45px;
+
+    min-height: 5px;
+
+    background: linear-gradient(
+        to top,
+        #d72638,
+        #ff4b5c
+    );
+
+    border-radius: 7px 7px 0 0;
+
+    transition:
+        height .4s ease,
+        transform .2s ease;
+
+    cursor:pointer;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.coluna-lucro-barra:hover {
+
+    transform: scaleY(1.03);
+
+    background: linear-gradient(
+        to top,
+        #ff1f38,
+        #ff6978
+    );
+
+}
+
+
+/* =========================================
+   NOME DO PRODUTO
+========================================= */
+
+.coluna-lucro-nome {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    color: #bdbdbd;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   GRÁFICO VAZIO
+========================================= */
+
+.grafico-vazio {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TEMA CLARO
+========================================= */
+
+body.light-mode .chart-header h2 {
+
+    color: var(--text-primary);
+
+}
+
+body.light-mode .chart-header span {
+
+    color: #fff;
+
+}
+
+body.light-mode .coluna-lucro-valor {
+
+    color: var(--text-primary);
+
+}
+
+body.light-mode .coluna-lucro-nome {
+
+    color: var(--text-secondary);
+
+}
+
+body.light-mode .grafico-vazio {
+
+    color: var(--text-muted);
+
+}
