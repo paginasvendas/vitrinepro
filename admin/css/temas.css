@@ -693,3 +693,192 @@ transition: var(--transition);
 }
 
 
+/* =========================================
+   TEMA CLARO - TEMAS
+========================================= */
+
+
+/* =========================================
+   CARDS DOS TEMAS
+========================================= */
+
+body.light-mode .card-tema{
+
+    background:var(--color-card);
+
+    color:var(--text-primary);
+
+    border-color:transparent;
+
+}
+
+body.light-mode .card-tema:hover{
+
+    border-color:#d72638;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+body.light-mode .card-tema h2{
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .card-tema p{
+
+    color:var(--text-secondary);
+
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+body.light-mode .info-tema span{
+
+    color:var(--text-secondary);
+
+}
+
+body.light-mode .info-tema strong{
+
+    color:var(--text-primary);
+
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR
+========================================= */
+
+body.light-mode .btn-voltar-tema{
+
+    background:#e5e5e5;
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .btn-voltar-tema:hover{
+
+    background:#dcdcdc;
+
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+body.light-mode .breadcrumb{
+
+    color:var(--text-secondary);
+
+}
+
+body.light-mode .breadcrumb strong{
+
+    color:var(--text-primary);
+
+}
+
+
+/* =========================================
+   ESTRUTURA DO TEMA
+========================================= */
+
+body.light-mode .estrutura-categoria{
+
+    background:var(--color-card);
+
+    border-color:var(--color-border);
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .estrutura-categoria-titulo h3{
+
+    color:var(--text-primary);
+
+}
+
+
+/* =========================================
+   SUBCATEGORIAS
+========================================= */
+
+body.light-mode .estrutura-subcategoria{
+
+    background:#f5f5f5;
+
+    border-color:var(--color-border);
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .estrutura-subcategoria-titulo{
+
+    color:var(--text-primary);
+
+}
+
+
+/* =========================================
+   TIPOS DE PRODUTO
+========================================= */
+
+body.light-mode .estrutura-tipo{
+
+    background:#e9e9e9;
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .estrutura-sem-tipos{
+
+    color:var(--text-muted);
+
+}
+
+body.light-mode .estrutura-vazio{
+
+    color:var(--text-muted);
+
+}
+
+
+/* =========================================
+   BADGE SISTEMA
+========================================= */
+
+body.light-mode .badge-sistema{
+
+    background:#e5e5e5;
+
+    color:#555;
+
+}
+
+
+/* =========================================
+   BADGE PERSONALIZADO
+========================================= */
+
+body.light-mode .badge-personalizado{
+
+    background:#e4f5e8;
+
+    color:#218838;
+
+}

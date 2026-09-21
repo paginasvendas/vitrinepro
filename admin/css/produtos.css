@@ -255,3 +255,49 @@ display: flex;
     padding: 18px;
     height: 100px;
 }
+
+/* =========================================
+   TEMA CLARO - PRODUTOS
+========================================= */
+
+body.light-mode .filtros input{
+
+    background:var(--color-card);
+
+    color:var(--text-primary);
+
+    border-color:var(--color-border);
+
+}
+
+body.light-mode .tabela-produtos{
+
+    background:var(--color-card);
+
+}
+
+body.light-mode .tabela-produtos th{
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .tabela-produtos td{
+
+    color:var(--text-primary);
+
+    border-top-color:var(--color-border);
+
+}
+
+body.light-mode thead{
+
+    background:#eeeeee;
+
+}
+
+body.light-mode tbody tr:hover{
+
+    background:var(--color-hover);
+
+}

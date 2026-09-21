@@ -30,6 +30,19 @@
 
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/variables.css">
+<script>
+(function () {
+
+    const tema = localStorage.getItem("vitrinepro_tema");
+
+    if (tema === "claro") {
+
+        document.documentElement.classList.add("light-mode");
+
+    }
+
+})();
+</script>
 <link rel="stylesheet" href="../css/global.css">
 <link rel="stylesheet" href="../css/layout.css">
 <link rel="stylesheet" href="../css/sidebar.css">
@@ -166,11 +179,11 @@
 
                 </button>
 
-                <button>
+<button id="btnTema">
 
-                    <i class="fa-solid fa-moon"></i>
+    <i class="fa-solid fa-moon"></i>
 
-                </button>
+</button>
 
                 <div class="user">
 
@@ -338,6 +351,7 @@
 
 <script src="../js/components/menu.js"></script>
 <script src="../js/core/app.js"></script>
+<script src="../js/core/theme.js"></script>
 
 <script>
 

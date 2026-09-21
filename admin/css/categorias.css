@@ -323,3 +323,58 @@ TOGGLE SWITCH
     transform:translateX(26px);
 
 }
+
+/* =========================================
+   TEMA CLARO - CATEGORIAS
+========================================= */
+
+body.light-mode .modal-categoria .modal-box{
+
+    background:var(--color-card);
+    color:var(--text-primary);
+
+    border:1px solid var(--color-border);
+
+}
+
+body.light-mode .modal-categoria .modal-box h2{
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .modal-categoria .modal-box input{
+
+    background:#f8f8f8;
+
+    color:var(--text-primary);
+
+    border-color:var(--color-border);
+
+}
+
+body.light-mode .modal-categoria .modal-box input::placeholder{
+
+    color:#888;
+
+}
+
+body.light-mode .modal-categoria .campo-slug input{
+
+    background:#eeeeee;
+
+    color:#777;
+
+}
+
+body.light-mode .modal-categoria .info-slug{
+
+    color:var(--text-secondary);
+
+}
+
+body.light-mode .modal-categoria .switch-label{
+
+    color:var(--text-primary);
+
+}

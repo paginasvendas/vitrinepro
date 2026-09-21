@@ -126,3 +126,24 @@
 
 }
 
+
+/* =========================================
+   TEMA CLARO
+========================================= */
+
+html.light-mode,
+body.light-mode{
+    --color-background:#f4f4f4;
+    --color-sidebar:#ffffff;
+    --color-header:#ffffff;
+    --color-card:#ffffff;
+    --color-hover:#eeeeee;
+    --color-border:#dddddd;
+    --text-primary:#222222;
+    --text-secondary:#555555;
+    --text-muted:#777777;
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.08);
+    --shadow-md:0 6px 18px rgba(0,0,0,.12);
+    --shadow-lg:0 10px 35px rgba(0,0,0,.15);
+}

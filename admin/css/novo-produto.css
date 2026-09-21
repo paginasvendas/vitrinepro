@@ -6,6 +6,11 @@ body {
     padding: 30px;
 }
 
+html.light-mode,
+html.light-mode body{
+    background:#f4f4f4;
+    color:#222;
+}
 
 .topo-pagina{
     display:flex;
@@ -447,4 +452,158 @@ body {
     color: #00d97e;
     font-size: 14px;
     margin: 5px 0;
+}
+
+/* =========================================
+   TEMA CLARO - NOVO PRODUTO
+========================================= */
+
+body.light-mode .topo-pagina h1{
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .btn-voltar{
+
+    background:#e5e5e5;
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .btn-voltar:hover{
+
+    background:#dcdcdc;
+
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+body.light-mode .card{
+
+    background:var(--color-card);
+
+    color:var(--text-primary);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+body.light-mode .card h2{
+
+    color:var(--text-primary);
+
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+body.light-mode .campo label{
+
+    color:var(--text-primary);
+
+}
+
+html.light-mode .campo input,
+html.light-mode .campo select,
+html.light-mode .campo textarea{
+    background:#f8f8f8;
+    color:#222222;
+    border-color:#dddddd;
+}
+
+body.light-mode .campo input,
+body.light-mode .campo select,
+body.light-mode .campo textarea{
+    background:#f8f8f8;
+    color:var(--text-primary);
+    border-color:var(--color-border);
+}
+
+
+/* =========================================
+   SWITCHES
+========================================= */
+
+body.light-mode .switch-label{
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .switch-label span{
+
+    color:var(--text-primary);
+
+}
+
+
+/* =========================================
+   UPLOAD
+========================================= */
+
+body.light-mode .upload-imagens{
+
+    border-color:#bdbdbd;
+
+    color:var(--text-secondary);
+
+}
+
+body.light-mode .preview-imagens img{
+
+    border-color:var(--color-border);
+
+}
+
+
+/* =========================================
+   TAMANHOS / CORES
+========================================= */
+
+body.light-mode .checks label{
+
+    background:#eeeeee;
+
+    color:var(--text-primary);
+
+}
+
+
+/* =========================================
+   ATRIBUTOS
+========================================= */
+
+body.light-mode .atributo-titulo strong{
+
+    color:var(--text-primary);
+
+}
+
+body.light-mode .opcao-atributo{
+
+    background:#eeeeee;
+
+    border-color:#d5d5d5;
+
+    color:var(--text-primary) !important;
+
+}
+
+body.light-mode .opcao-atributo span{
+
+    color:var(--text-primary) !important;
+
+}
+
+body.light-mode .opcao-atributo:hover{
+
+    border-color:#d72638;
+
 }
